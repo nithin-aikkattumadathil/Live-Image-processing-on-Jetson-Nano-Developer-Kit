@@ -2,6 +2,7 @@
 * flash Jetpack image on jetson nano developer kit through SD card
   
 # Steps to do after image flashing
+
 *   sudo apt-get update
 *   sudo apt-get install git cmake libpython3-dev python3-numpy
 *   git clone --recursive https://github.com/dusty-nv/jetson-inference
@@ -12,7 +13,9 @@
 *   cd ..
 *   cd tools
 *   ./download-models.sh
-*   models to select for download 3 5 14 16 18 19 24 25 27 29 31 33 along with preselected models
+    
+#   models to select for download 3 5 14 16 18 19 24 25 27 29 31 33 along with preselected models
+
 *   cd ..
 *   cd build
 *   make
@@ -25,7 +28,9 @@
 *   v4l2-ctl --list-devices  (to list camera devices ,and note down whether video0 or video1 to use in python code)
 *   v4l2-ctl --device /dev/video0 --list-formats-ext
 *   cd ~
+   
 #   after above step open notepad and rename untitled file as my-detection.py,then write the below code and save
+
 * import jetson.inference
 * import jetson.utils
 
